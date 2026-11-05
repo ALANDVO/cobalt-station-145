@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-agent-workspace-isolation
+agent-management-api
 
 ## Roadmap
 
@@ -37,7 +37,7 @@ Tests: `tests/test_health.py`
 
 ### agent-management-api — Agent CRUD API with workspace provisioning
 
-Status: planned
+Status: done
 
 Acceptance:
 - POST /api/agents creates agent with isolated workspace

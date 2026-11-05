@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "agent-workspace-isolation",
+  "current_feature": "agent-management-api",
   "features": [
     {
       "id": "agent-workspace-isolation",
@@ -41,7 +41,7 @@
     {
       "id": "agent-management-api",
       "title": "Agent CRUD API with workspace provisioning",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
         "POST /api/agents creates agent with isolated workspace",
         "GET /api/agents lists agents",
@@ -127,3 +127,4 @@
     }
   ]
 }
+
