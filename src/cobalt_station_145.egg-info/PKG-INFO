@@ -18,7 +18,10 @@ Requires-Dist: httpx>=0.27.0; extra == "dev"
 Requires-Dist: ruff>=0.4.0; extra == "dev"
 Requires-Dist: mypy>=1.10.0; extra == "dev"
 
-# Cobalt Station 145
+# Cobalt Station 145 — Alan Vo
+
+> Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
+
 
 A smarter, self-hosted AI assistant — multi-user, multi-agent.
 
@@ -113,3 +116,5 @@ mypy src/
 # Test
 pytest
 ```
+
+Maintainer: Alan Vo <alanvo@gmail.com>
