@@ -101,3 +101,6 @@ Implementation: `src/cobalt_station/infra/db_pool.py`
 
 Tests: `tests/test_db_pool.py`
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

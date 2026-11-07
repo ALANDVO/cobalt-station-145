@@ -37,3 +37,6 @@ Partial code published for continued development. Known issues: STATUS.md.
 - FastAPI app with lifespan management for agent service initialization
 - Request-scoped dependency injection for agent service
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)
