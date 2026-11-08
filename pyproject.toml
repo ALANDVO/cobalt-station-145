@@ -16,6 +16,7 @@ dependencies = [
     "python-multipart>=0.0.9",
     "aiofiles>=23.2.0",
     "sqlite-utils>=3.37.0",
+    "mcp>=1.0.0",
 ]
 
 [project.optional-dependencies]

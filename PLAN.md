@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-agent-management-api
+mcp-tools-exposure
 
 ## Roadmap
 
@@ -51,7 +51,7 @@ Tests: `tests/test_agents_api.py`
 
 ### mcp-tools-exposure — MCP tool exposure for memory system
 
-Status: planned
+Status: done
 
 Acceptance:
 - MCP server exposes memory read/write tools
