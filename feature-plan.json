@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "agent-management-api",
+  "current_feature": "mcp-tools-exposure",
   "features": [
     {
       "id": "agent-workspace-isolation",
@@ -60,7 +60,7 @@
     {
       "id": "mcp-tools-exposure",
       "title": "MCP tool exposure for memory system",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
         "MCP server exposes memory read/write tools",
         "External AI clients can connect via MCP protocol",

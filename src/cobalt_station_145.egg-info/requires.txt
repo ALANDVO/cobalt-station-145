@@ -5,6 +5,7 @@ pydantic-settings>=2.3.0
 python-multipart>=0.0.9
 aiofiles>=23.2.0
 sqlite-utils>=3.37.0
+mcp>=1.0.0
 
 [dev]
 pytest>=8.2.0

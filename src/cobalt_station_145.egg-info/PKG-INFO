@@ -11,6 +11,7 @@ Requires-Dist: pydantic-settings>=2.3.0
 Requires-Dist: python-multipart>=0.0.9
 Requires-Dist: aiofiles>=23.2.0
 Requires-Dist: sqlite-utils>=3.37.0
+Requires-Dist: mcp>=1.0.0
 Provides-Extra: dev
 Requires-Dist: pytest>=8.2.0; extra == "dev"
 Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
@@ -118,3 +119,7 @@ pytest
 ```
 
 Maintainer: Alan Vo <alanvo@gmail.com>
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net) · [X: @alanvoasi](https://x.com/alanvoasi)

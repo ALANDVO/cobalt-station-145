@@ -1,9 +1,31 @@
 # Changelog
 
-## 1.1.0 — work-in-progress checkpoint
+## 1.2.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
 
+## 1.1.0 — 2026-11-08
+
+### Added
+- **MCP Tool Exposure**: MCP server exposing memory tools for agent workspaces
+  - `read_memory` - Read memory files from agent workspace
+  - `write_memory` - Write memory files to agent workspace  
+  - `list_memory` - List memory files in agent workspace
+  - Streamable HTTP transport at `/mcp` endpoint
+  - Full workspace isolation enforced per agent
+- **MCP Tools Module**: Handler functions for MCP tool calls with validation
+- **Tests**: 6 comprehensive tests for MCP tools and API (test_mcp.py)
+
+### Changed
+- Updated main.py to use FastAPI lifespan for startup/shutdown
+- MCP routes mounted at app creation time
+
+### Infrastructure
+- Added `mcp>=1.0.0` dependency to pyproject.toml
+- Workspace isolation preserved for MCP tool access
+
+
+## 1.0.0 — 2026-11-05
 ## 1.0.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
