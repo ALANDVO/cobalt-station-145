@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "mcp-tools-exposure",
+  "current_feature": "user-isolation-preconfigured-specialists",
   "features": [
     {
       "id": "agent-workspace-isolation",
@@ -77,7 +77,7 @@
     {
       "id": "user-isolation-preconfigured-specialists",
       "title": "User isolation with pre-configured specialists",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Admin can create specialist agents with pre-configured models/skills/MCP",
         "Regular users get assigned specialists without configuration access",
@@ -127,4 +127,3 @@
     }
   ]
 }
-
