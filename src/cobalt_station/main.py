@@ -8,7 +8,9 @@ from fastapi import FastAPI
 
 from cobalt_station.api.health import router as health_router
 from cobalt_station.api.agents import router as agents_router
+from cobalt_station.api.users import router as users_router
 from cobalt_station.services.agent_service import AgentService
+from cobalt_station.services.user_service import UserService
 from cobalt_station.mcp.server import create_mcp_routes
 
 
@@ -20,6 +22,7 @@ WORKSPACE_ROOT = Path("workspaces")
 async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     # Startup
     app.state.agent_service = AgentService(WORKSPACE_ROOT)
+    app.state.user_service = UserService(WORKSPACE_ROOT)
     yield
     # Shutdown
 
@@ -38,6 +41,7 @@ def create_app() -> FastAPI:
     # Include routers
     app.include_router(health_router)
     app.include_router(agents_router)
+    app.include_router(users_router)
 
     return app
 

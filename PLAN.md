@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-mcp-tools-exposure
+user-isolation-preconfigured-specialists
 
 ## Roadmap
 
@@ -64,7 +64,7 @@ Tests: `tests/test_mcp.py`
 
 ### user-isolation-preconfigured-specialists — User isolation with pre-configured specialists
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Admin can create specialist agents with pre-configured models/skills/MCP
