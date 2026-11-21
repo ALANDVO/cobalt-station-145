@@ -1,8 +1,24 @@
 # Changelog
 
-## 1.3.0 — work-in-progress checkpoint
+## 1.4.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
+
+## 1.3.0 — work-in-progress checkpoint
+
+### Added
+- **Pre-configured Specialist Agents**: Agents can now be created with pre-configured models, skills, and MCP server endpoints
+  - `model` field on AgentCreate/Agent for specifying pre-configured LLM models (e.g. 'gpt-4', 'claude-3', 'zhipu-glm-5')
+  - `skills` field on AgentCreate/Agent for listing pre-configured capabilities (e.g. ['web_search', 'file_analysis', 'code_review'])
+  - `mcp_servers` field on AgentCreate/Agent for specifying pre-configured MCP server connections (e.g. ['mcp://server:port'])
+- **Pre-configured specialist assignment**: Users can be assigned specialists with full model/skills/MCP configuration in a single operation
+
+### Changed
+- Updated `src/cobalt_station/models/agent.py`: Added `model`, `skills`, `mcp_servers` fields to `AgentCreate`, `Agent`, and `AgentResponse` models
+- Updated `src/cobalt_station/services/agent_service.py`: `create_agent` now passes through pre-configured fields from `AgentCreate` to `Agent` entity
+- Updated API response models to include pre-configured specialist fields
+
+Known issues: STATUS.md.
 
 ## 1.2.0 — work-in-progress checkpoint
 
