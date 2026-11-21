@@ -28,6 +28,9 @@ class AgentService:
             status=AgentStatus.CREATED,
             workspace_path=workspace_path,
             config=agent_create.config,
+            model=agent_create.model,
+            skills=agent_create.skills,
+            mcp_servers=agent_create.mcp_servers,
         )
 
         workspace_path.mkdir(parents=True, exist_ok=True)

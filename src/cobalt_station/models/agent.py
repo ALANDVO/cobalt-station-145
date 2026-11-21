@@ -26,6 +26,17 @@ class Agent(BaseModel):
     created_at: datetime = Field(default_factory=datetime.utcnow, description="Creation timestamp")
     updated_at: datetime = Field(default_factory=datetime.utcnow, description="Last update timestamp")
     config: dict = Field(default_factory=dict, description="Agent configuration")
+    model: Optional[str] = Field(
+        None, description="Pre-configured model (e.g. 'gpt-4', 'claude-3', 'zhipu-glm-5')"
+    )
+    skills: Optional[list[str]] = Field(
+        default_factory=list,
+        description="Pre-configured skills (e.g. ['web_search', 'file_analysis', 'code_review'])",
+    )
+    mcp_servers: Optional[list[str]] = Field(
+        default_factory=list,
+        description="Pre-configured MCP server endpoints (e.g. ['mcp://server:port'])",
+    )
 
 
 class AgentCreate(BaseModel):
@@ -33,6 +44,17 @@ class AgentCreate(BaseModel):
     name: str = Field(..., min_length=1, max_length=100, description="Agent name")
     description: str = Field(default="", max_length=500, description="Agent description")
     config: dict = Field(default_factory=dict, description="Agent configuration")
+    model: Optional[str] = Field(
+        None, description="Pre-configured model (e.g. 'gpt-4', 'claude-3', 'zhipu-glm-5')"
+    )
+    skills: Optional[list[str]] = Field(
+        default_factory=list,
+        description="Pre-configured skills (e.g. ['web_search', 'file_analysis', 'code_review'])",
+    )
+    mcp_servers: Optional[list[str]] = Field(
+        default_factory=list,
+        description="Pre-configured MCP server endpoints (e.g. ['mcp://server:port'])",
+    )
 
 
 class AgentUpdate(BaseModel):
@@ -48,6 +70,17 @@ class AgentResponse(BaseModel):
     id: str
     name: str
     description: str
+    model: Optional[str] = Field(
+        None, description="Pre-configured model (e.g. 'gpt-4', 'claude-3', 'zhipu-glm-5')"
+    )
+    skills: Optional[list[str]] = Field(
+        default_factory=list,
+        description="Pre-configured skills (e.g. ['web_search', 'file_analysis', 'code_review'])",
+    )
+    mcp_servers: Optional[list[str]] = Field(
+        default_factory=list,
+        description="Pre-configured MCP server endpoints (e.g. ['mcp://server:port'])",
+    )
     status: AgentStatus
     workspace_path: str
     created_at: datetime
