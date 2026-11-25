@@ -5,15 +5,18 @@ src/cobalt_station/main.py
 src/cobalt_station/api/__init__.py
 src/cobalt_station/api/agents.py
 src/cobalt_station/api/health.py
+src/cobalt_station/api/users.py
 src/cobalt_station/mcp/__init__.py
 src/cobalt_station/mcp/server.py
 src/cobalt_station/mcp/tools.py
 src/cobalt_station/models/__init__.py
 src/cobalt_station/models/agent.py
+src/cobalt_station/models/user.py
 src/cobalt_station/security/__init__.py
 src/cobalt_station/security/workspace_guard.py
 src/cobalt_station/services/__init__.py
 src/cobalt_station/services/agent_service.py
+src/cobalt_station/services/user_service.py
 src/cobalt_station/tools/__init__.py
 src/cobalt_station/tools/file_tools.py
 src/cobalt_station_145.egg-info/PKG-INFO
@@ -23,4 +26,6 @@ src/cobalt_station_145.egg-info/requires.txt
 src/cobalt_station_145.egg-info/top_level.txt
 tests/test_agents_api.py
 tests/test_health.py
+tests/test_mcp.py
+tests/test_user_isolation.py
 tests/test_workspace_isolation.py
