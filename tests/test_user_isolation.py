@@ -159,9 +159,21 @@ class TestUserIsolation:
         assert update_resp.status_code == 200
         data = update_resp.json()
         assert data["specialist_id"] == specialist_id
-        # Verify that the user now has the specialist assigned
+
+    @pytest.mark.asyncio
+    async def test_update_user_with_nonexistent_specialist(self, client):
+        """Test that updating a user with a non-existent specialist_id returns 400."""
+        # Create a user
+        user_resp = await client.post("/api/users", json={"name": "Regular User"})
+        user_id = user_resp.json()["id"]
+        # Try to assign a non-existent specialist - should return 400
+        resp = await client.patch(f"/api/users/{user_id}", json={"specialist_id": "nonexistent-agent-id"})
+        assert resp.status_code == 400
+        data = resp.json()
+        assert "Specialist agent not found" in data["detail"]
+        # Verify user still has no specialist
         get_resp = await client.get(f"/api/users/{user_id}")
-        assert get_resp.json()["specialist_id"] == specialist_id
+        assert get_resp.json()["specialist_id"] is None
 
     @pytest.mark.asyncio
     async def test_user_workspace_guard_enforces_isolation(self, client):

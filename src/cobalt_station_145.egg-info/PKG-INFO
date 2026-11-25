@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: cobalt-station-145
-Version: 0.1.0
+Version: 1.4.0
 Summary: A smarter, self-hosted AI assistant — multi-user, multi-agent
 Requires-Python: >=3.11
 Description-Content-Type: text/markdown
@@ -20,6 +20,8 @@ Requires-Dist: ruff>=0.4.0; extra == "dev"
 Requires-Dist: mypy>=1.10.0; extra == "dev"
 
 # Cobalt Station 145 — Alan Vo
+
+Current version: `1.4.0`.
 
 > Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
 

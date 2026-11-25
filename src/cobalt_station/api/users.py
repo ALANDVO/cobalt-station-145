@@ -42,8 +42,23 @@ async def get_user(user_id: str, service: UserService = Depends(get_user_service
 
 
 @router.patch("/{user_id}", response_model=UserResponse)
-async def update_user(user_id: str, user_update: UserUpdate, service: UserService = Depends(get_user_service)) -> UserResponse:
+async def update_user(
+    request: Request,
+    user_id: str,
+    user_update: UserUpdate,
+    service: UserService = Depends(get_user_service),
+) -> UserResponse:
     """Update a user's properties."""
+    # Validate specialist_id refers to an existing agent
+    if user_update.specialist_id is not None:
+        agent_service = request.app.state.agent_service
+        try:
+            agent_service.get_agent(user_update.specialist_id)
+        except KeyError:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Specialist agent not found: {user_update.specialist_id}",
+            )
     try:
         user = service.update_user(
             user_id,
